@@ -1,5 +1,5 @@
 {
- "name": "成人网盘搜索（大盘搜/盘友圈/UP云搜）",
+ "name": "成人网盘搜索（大盘搜优先，12 站并联）",
  "spider": "https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/pg.txt;md5;1a1efb7d1e3ba4b56692d2f9859cc082",
  "wallpaper": "",
  "logo": "",
@@ -14,8 +14,44 @@
    "filterable": 1
   },
   {
+   "key": "pan_pansearch",
+   "name": "网盘┃PanSearch",
+   "type": 3,
+   "api": "csp_PanSearch",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_pansou",
+   "name": "网盘┃盘搜",
+   "type": 3,
+   "api": "csp_PanSou",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_panta",
+   "name": "网盘┃盘Ta",
+   "type": 3,
+   "api": "csp_Panta",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_yiso",
+   "name": "网盘┃易搜",
+   "type": 3,
+   "api": "csp_YiSo",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
    "key": "pan_panyq",
-   "name": "网盘┃盘友圈 综合",
+   "name": "网盘┃盘友圈",
    "type": 3,
    "api": "csp_Panyq",
    "searchable": 1,
@@ -23,8 +59,35 @@
    "filterable": 1
   },
   {
+   "key": "pan_miaosou",
+   "name": "网盘┃秒搜",
+   "type": 3,
+   "api": "csp_MiaoSou",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_qianfan",
+   "name": "网盘┃千帆",
+   "type": 3,
+   "api": "csp_Qianfan",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_yunso",
+   "name": "网盘┃小云",
+   "type": 3,
+   "api": "csp_YunSo",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
    "key": "pan_upyun",
-   "name": "网盘┃UP云搜 综合",
+   "name": "网盘┃UP云搜",
    "type": 3,
    "api": "csp_UpYun",
    "searchable": 1,
@@ -32,10 +95,19 @@
    "filterable": 1
   },
   {
-   "key": "pan_panta",
-   "name": "网盘┃盘Ta 综合",
+   "key": "pan_eight",
+   "name": "网盘┃88网盘",
    "type": 3,
-   "api": "csp_Panta",
+   "api": "csp_EightEight",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_funletu",
+   "name": "网盘┃趣盘搜",
+   "type": 3,
+   "api": "csp_Funletu",
    "searchable": 1,
    "quickSearch": 1,
    "filterable": 1
