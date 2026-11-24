@@ -1,6 +1,6 @@
 {
  "name": "成人网盘（AList 自建挂载，非现成源）",
- "spider": "https://raw.githubusercontent.com/wanbaiwan8888/tvbox18/main/fish.jar;md5;d07d678a0f3b813b67826a492b297581",
+ "spider": "https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/fish.txt;md5;d07d678a0f3b813b67826a492b297581",
  "wallpaper": "",
  "logo": "",
  "sites": [
