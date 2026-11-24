@@ -1,0 +1,39 @@
+{
+ "name": "成人网盘（AList 自建挂载，非现成源）",
+ "spider": "https://raw.githubusercontent.com/wanbaiwan8888/tvbox18/main/fish.jar;md5;d07d678a0f3b813b67826a492b297581",
+ "wallpaper": "",
+ "logo": "",
+ "sites": [
+  {
+   "key": "pan_alist_mine",
+   "name": "网盘┃我的18+目录",
+   "type": 3,
+   "api": "csp_AList",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "ext": {
+    "drives": [
+     {
+      "name": "我的18+",
+      "server": "http://127.0.0.1:5244/",
+      "search": true,
+      "hidden": false,
+      "login": {
+       "username": "admin",
+       "password": "REPLACE_ALIST_PWD"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "lives": [],
+ "parses": [],
+ "flags": [
+  "youku",
+  "qq",
+  "iqiyi",
+  "mgtv"
+ ]
+}
