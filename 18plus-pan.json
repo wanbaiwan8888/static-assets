@@ -1,31 +1,44 @@
 {
- "name": "成人网盘（AList 自建挂载，非现成源）",
- "spider": "https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/fish.txt;md5;d07d678a0f3b813b67826a492b297581",
+ "name": "成人网盘搜索（大盘搜/盘友圈/UP云搜）",
+ "spider": "https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/pg.txt;md5;1a1efb7d1e3ba4b56692d2f9859cc082",
  "wallpaper": "",
  "logo": "",
  "sites": [
   {
-   "key": "pan_alist_mine",
-   "name": "网盘┃我的18+目录",
+   "key": "pan_dapanso",
+   "name": "网盘┃大盘搜 18+",
    "type": 3,
-   "api": "csp_AList",
+   "api": "csp_DaPanSo",
    "searchable": 1,
    "quickSearch": 1,
-   "filterable": 1,
-   "ext": {
-    "drives": [
-     {
-      "name": "我的18+",
-      "server": "http://127.0.0.1:5244/",
-      "search": true,
-      "hidden": false,
-      "login": {
-       "username": "admin",
-       "password": "REPLACE_ALIST_PWD"
-      }
-     }
-    ]
-   }
+   "filterable": 1
+  },
+  {
+   "key": "pan_panyq",
+   "name": "网盘┃盘友圈 综合",
+   "type": 3,
+   "api": "csp_Panyq",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_upyun",
+   "name": "网盘┃UP云搜 综合",
+   "type": 3,
+   "api": "csp_UpYun",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
+  },
+  {
+   "key": "pan_panta",
+   "name": "网盘┃盘Ta 综合",
+   "type": 3,
+   "api": "csp_Panta",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1
   }
  ],
  "lives": [],
