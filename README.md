@@ -1,28 +1,24 @@
 # TVBox 纯成人接口配置
 
-更新: 2026/11/24 14:21:26
+更新: 2026/11/24 14:42:12
 
-## 配置地址（直接粘进 TVBox / 影视仓）
+## 配置地址
 
-| 用途 | 地址 |
+| 用途 | 固定版本地址（推荐，缓存不会串） |
 |---|---|
-| **全量（14 个不重复片库）** | `https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/18plus-full.json` |
-| 网盘类（AList 自建） | `https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/18plus-pan.json` |
+| **成人直连（14 个不重复片库）** | `https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@v3/18plus-full.json` |
+| **成人网盘搜索（12 站）** | `https://cdn.jsdelivr.net/gh/wanbaiwan8888/tvbox18@v3/18plus-pan.json` |
 
-备用 CDN（jsDelivr 主域抽风时换）:
+`@main` 也可用，但 jsDelivr 对分支有 12h 缓存，改完文件不刷；固定 tag 最稳。
 
-- `https://fastly.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/18plus-full.json`
-- `https://gcore.jsdelivr.net/gh/wanbaiwan8888/tvbox18@main/18plus-full.json`
+## 网盘搜索怎么来的
+
+- 公网现成的成人网盘接口已全部失效：色花堂 `sehuatang.net` 403、七陌 `fan.txt` 403、notabug `pg.jar` 404、`agit.ai` 跳转空页、`s3.tebi.io`/`liulili.1919810.com` 不可达、`pansearch.me` 不可达、jsDelivr 拒收 `.jar` 后缀。
+- 现在用的是 `pg.jar`（3.74MB，含 DaPanSo/PanSearch/PanSou/Panta/YiSo/Panyq/MiaoSou/Qianfan/YunSo/UpYun/EightEight/Funletu 等网盘搜索类），以 `pg.txt` 自托管在 jsDelivr，md5 `1a1efb7d1e3ba4b56692d2f9859cc082`。
+- 上游已实测有成人内容：`dapanso.com` 搜「麻豆」出 4 条夸克分享、「无码」9 条、「探花」6 条、「成人」15 条（`pan.quark.cn/s/...`）。
 
 ## 说明
 
-- 全部源为第三方公开 CMS，`type 0`=XML / `type 1`=JSON，**无需 jar**；配置托管在 jsDelivr，家里那台 192.168.110.16 关机也能用。
-- 片库已按「总条数+首条片名」去重，镜像域名只保留最快的那个。
-- 网盘类那条需要 jar：本仓 `fish.txt` 就是 jar 本体（jsDelivr 不给 `.jar` 后缀，改 `.txt` 一样加载，只看 md5 `d07d678a0f3b813b67826a492b297581`）。
-- 网盘源的 `ext.drives[0].server` 要改成你自己的 AList（默认占位 `http://127.0.0.1:5244/`，密码 `REPLACE_ALIST_PWD`）。
-- 公开成人网盘源已全部失效（色花堂/pg.jar/pansearch 均 403 或不可达），所以这一条只做「自建目录」入口。
-- `fish.jar` 是同一份二进制（留给需要 `.jar` 后缀的播放器）；`fish.txt` 用于 jsDelivr。
-
-## 复测
-
-域名会失效。用仓库里的 `_verify18.mjs` 定期复跑：`ac=list`×3 取中位 + `ac=detail` + m3u8 + 首个 ts 分片。
+- 直连那 14 个源是纯 m3u8，无需 jar，不依赖任何本机服务。
+- 网盘搜索返回的是夸克/UC 分享链接，播放要登录对应网盘，非会员会被限速——这是网盘类的物理上限，不是接口慢。
+- 搜索类站点常换域名，若某个源搜不出东西，换同配置里其它站；`_verify18.mjs` 可复测直连源。
